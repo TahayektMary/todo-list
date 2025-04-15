@@ -1,0 +1,117 @@
+/* Styles généraux */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #fefcea, #f1daff);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Conteneur principal */
+.container {
+    max-width: 400px;
+    width: 100%;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Titre principal */
+h1 {
+    font-size: 2rem;
+    color: #ff9800;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Formulaire */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+/* Champs de saisie */
+input {
+    width: 100%;
+    max-width: 350px;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+    background: #f9f9f9;
+}
+
+input:focus {
+    border-color: #ff9800;
+    box-shadow: 0 0 5px rgba(255, 152, 0, 0.5);
+    outline: none;
+}
+
+input.error-border {
+    border-color: #e53e3e;
+    background-color: #fff5f5;
+}
+
+/* Message d'erreur */
+.error-message {
+    color: #e53e3e;
+    font-size: 0.9rem;
+    margin-top: -10px;
+    text-align: left;
+    width: 100%;
+    max-width: 350px;
+}
+
+/* Boutons */
+button {
+    padding: 12px 20px;
+    border: none;
+    background-color: #ff9800;
+    color: white;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 100%;
+    max-width: 350px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background-color: #e57c00;
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    input,
+    button {
+        max-width: 100%;
+    }
+}
